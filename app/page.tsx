@@ -7,7 +7,7 @@ export default function Home() {
           <span className="text-sm font-semibold text-white tracking-wide">
             Profil<span className="text-indigo-400">.</span>
           </span>
-          <ul className="flex items-center gap-6 text-sm">
+          <ul className="flex items-center gap-5 text-sm">
             <li>
               <a
                 href="#about"
@@ -18,10 +18,10 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="#projects"
+                href="#certificates"
                 className="text-slate-300 hover:text-indigo-400 transition-colors duration-200"
               >
-                Projects
+                Certificates
               </a>
             </li>
             <li>
@@ -37,12 +37,12 @@ export default function Home() {
       </header>
 
       {/* Konten Utama */}
-      <main className="flex-1 flex items-center justify-center p-4 pt-24 pb-12 w-full">
-        <div
+      <main className="flex-1 flex flex-col items-center gap-8 p-4 pt-24 pb-12 w-full max-w-lg">
+        {/* Section: About */}
+        <section
           id="about"
-          className="w-full max-w-lg bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl backdrop-blur-sm"
+          className="w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl backdrop-blur-sm scroll-mt-24"
         >
-          {/* Avatar Placeholder */}
           <div className="flex flex-col items-center text-center">
             <div className="w-24 h-24 rounded-full bg-indigo-600 flex items-center justify-center text-3xl font-bold text-white shadow-lg mb-4 ring-4 ring-slate-800">
               <span>JD</span>
@@ -55,7 +55,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Detail Profil */}
           <div className="mt-6 border-t border-slate-800 pt-5 space-y-3 text-sm">
             <div className="flex justify-between items-center py-1">
               <span className="text-slate-400">Pendidikan</span>
@@ -70,9 +69,62 @@ export default function Home() {
               <span className="font-medium text-slate-200">[Placeholder Skill / Topik]</span>
             </div>
           </div>
+        </section>
 
-          {/* Bagian Kontak */}
-          <div id="contact" className="mt-6 pt-5 border-t border-slate-800 flex flex-col sm:flex-row gap-3">
+        {/* Section: Certificates */}
+        <section
+          id="certificates"
+          className="w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl backdrop-blur-sm scroll-mt-24"
+        >
+          <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+            Certificates
+          </h2>
+
+          <div className="space-y-3">
+            {/* Card Certificate 1 */}
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 transition-colors">
+              <div className="flex justify-between items-start">
+                <span className="font-medium text-sm text-slate-200">[Nama Sertifikat / Pelatihan 1]</span>
+                <span className="text-xs text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">2026</span>
+              </div>
+              <p className="text-xs text-slate-400 mt-1">Penerbit: [Organisasi / Platform]</p>
+              <a
+                href="#"
+                className="inline-block mt-3 text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                Lihat Kredensial &rarr;
+              </a>
+            </div>
+
+            {/* Card Certificate 2 */}
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 transition-colors">
+              <div className="flex justify-between items-start">
+                <span className="font-medium text-sm text-slate-200">[Nama Sertifikat / Pelatihan 2]</span>
+                <span className="text-xs text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">2025</span>
+              </div>
+              <p className="text-xs text-slate-400 mt-1">Penerbit: [Organisasi / Platform]</p>
+              <a
+                href="#"
+                className="inline-block mt-3 text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                Lihat Kredensial &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Section: Contact & Footer */}
+        <section
+          id="contact"
+          className="w-full bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl backdrop-blur-sm scroll-mt-24"
+        >
+          <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-indigo-500"></span>
+            Contact
+          </h2>
+
+          <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="mailto:placeholder@email.com"
               className="flex-1 text-center py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 transition-colors rounded-xl font-medium text-sm text-white"
@@ -97,11 +149,10 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Footer */}
           <footer className="mt-8 text-center text-xs text-slate-500">
             &copy; {new Date().getFullYear()} [Nama Kamu]. Built with Next.js & Deployed on Vercel.
           </footer>
-        </div>
+        </section>
       </main>
     </div>
   );
