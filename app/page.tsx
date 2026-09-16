@@ -1,69 +1,67 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-slate-900 text-slate-100 flex items-center justify-center p-4">
+      <div className="w-full max-w-lg bg-slate-800/80 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-xl backdrop-blur-sm">
+        {/* Avatar Placeholder */}
+        <div className="flex flex-col items-center text-center">
+          <div className="w-24 h-24 rounded-full bg-indigo-600 flex items-center justify-center text-3xl font-bold text-white shadow-lg mb-4 ring-4 ring-slate-700">
+            <span>JD</span>
+          </div>
+
+          <h1 className="text-2xl font-bold text-white tracking-tight">[Nama Lengkap]</h1>
+          <p className="text-indigo-400 font-medium text-sm mt-1">[Bidang / Minat / Role Utama]</p>
+          <p className="text-slate-400 text-sm mt-3 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        {/* Info Ringkas */}
+        <div className="mt-6 border-t border-slate-700/80 pt-5 space-y-3 text-sm">
+          <div className="flex justify-between items-center py-1">
+            <span className="text-slate-400">Pendidikan</span>
+            <span className="font-medium text-slate-200">[Jurusan / Institusi]</span>
+          </div>
+          <div className="flex justify-between items-center py-1">
+            <span className="text-slate-400">Domisili</span>
+            <span className="font-medium text-slate-200">[Kota, Negara]</span>
+          </div>
+          <div className="flex justify-between items-center py-1">
+            <span className="text-slate-400">Fokus Minat</span>
+            <span className="font-medium text-slate-200">[Placeholder Skill / Topik]</span>
+          </div>
+        </div>
+
+        {/* Link / Tombol Kontak */}
+        <div className="mt-6 pt-5 border-t border-slate-700/80 flex flex-col sm:flex-row gap-3">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:placeholder@email.com"
+            className="flex-1 text-center py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 transition-colors rounded-xl font-medium text-sm text-white"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            Email
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="flex-1 text-center py-2.5 px-4 bg-slate-700 hover:bg-slate-600 transition-colors rounded-xl font-medium text-sm text-slate-200"
           >
-            Documentation
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center py-2.5 px-4 bg-slate-700 hover:bg-slate-600 transition-colors rounded-xl font-medium text-sm text-slate-200"
+          >
+            LinkedIn
           </a>
         </div>
-      </main>
-    </div>
+
+        {/* Footer */}
+        <footer className="mt-8 text-center text-xs text-slate-500">
+          &copy; {new Date().getFullYear()} [Nama Kamu]. Built with Next.js & Deployed on Vercel.
+        </footer>
+      </div>
+    </main>
   );
 }
